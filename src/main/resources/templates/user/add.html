@@ -7,16 +7,16 @@
 <body>
 <form method="post" action="/user">
     <label>Username
-    <input type="text" value="username">
+    <input type="text" name="username" th:value="${username}">
     </label>
     <label>Email
-        <input type="email" value="email">
+        <input type="email" name="email" th:value="${email}">
     </label>
     <label>Password
-        <input type="password" value="password">
+        <input type="password" name="password" th:value="${password}">
     </label>
     <label>Verify Password
-        <input type="password" value="verify">
+        <input type="password" name="verify" th:value="${verify}">
     </label>
     <input type="submit" value="Submit">
 </form>

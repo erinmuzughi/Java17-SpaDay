@@ -18,7 +18,7 @@ public class UserController {
 
     }
 
-    @PostMapping
+    @PostMapping("")
     public String processAddUserForm(Model model, @ModelAttribute User user, String verify) {
         if (!user.getPassword().equals(verify)) {
             model.addAttribute("username", user.getUsername());
