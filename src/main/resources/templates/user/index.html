@@ -3,8 +3,18 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Title</title>
+
 </head>
 <body>
-<h1>Welcome to the Spa!</h1>
+<h1 th:text ="'Welcome ' + ${username} + ' to the Spa!'">Welcome to the Spa!</h1>
+<a th:href="@{/}">Click Here to Select Services</a>
+
+<h2>Users</h2>
+<th:block>
+    <ul th:each="someUser : ${users}" >
+        <li th:text = "${someUser.username}">Test</li>
+    </ul>
+</th:block>
+
 </body>
 </html>

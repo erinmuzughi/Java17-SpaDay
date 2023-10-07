@@ -1,6 +1,8 @@
 package org.launchcode.models;
 
 public class User {
+    private int id;
+    private static int nextId = 1;
     private String username;
     private String email;
     private String password;
@@ -9,6 +11,8 @@ public class User {
         this.username = username;
         this.email = email;
         this.password = password;
+        this.id = nextId;
+        nextId++;
     }
 
     public String getUsername() {
@@ -33,5 +37,9 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public int getId() {
+        return id;
     }
 }
