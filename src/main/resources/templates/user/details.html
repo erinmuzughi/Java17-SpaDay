@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title>User Details</title>
+    <link rel="stylesheet" th:href="@{/styles.css}">
+</head>
+<body>
+    <p>User: <span th:text="${user.username}"></span></p>
+    <p>Email: <span th:text="${user.email}"></span></p>
+    <p class="small">Date Added: <span th:text="${user.dateRegistered}"></span></p>
+</body>
+</html>

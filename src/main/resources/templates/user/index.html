@@ -12,7 +12,7 @@
 <h2>Users</h2>
 <th:block>
     <ul th:each="someUser : ${users}" >
-        <li th:text = "${someUser.username}">Test</li>
+        <a th:href="@{'/user/details/' + ${someUser.id}}"><li th:text = "${someUser.username}">Test</li></a>
     </ul>
 </th:block>
 

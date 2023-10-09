@@ -25,6 +25,10 @@ table {
             text-align: center;
 }
 
-p.error {
+.error {
     color: red;
+}
+
+.small {
+font-size: 13px;
 }

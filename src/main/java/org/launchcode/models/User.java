@@ -1,17 +1,21 @@
 package org.launchcode.models;
 
+import java.time.LocalDate;
+
 public class User {
-    private int id;
     private static int nextId = 1;
+    private int id;
     private String username;
     private String email;
     private String password;
+    private final LocalDate dateRegistered;
 
     public User(String username, String email, String password) {
         this.username = username;
         this.email = email;
         this.password = password;
         this.id = nextId;
+        this.dateRegistered = LocalDate.now();
         nextId++;
     }
 
@@ -41,5 +45,9 @@ public class User {
 
     public int getId() {
         return id;
+    }
+
+    public LocalDate getDateRegistered() {
+        return dateRegistered;
     }
 }
